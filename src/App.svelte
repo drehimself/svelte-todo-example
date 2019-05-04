@@ -32,7 +32,7 @@
 	];
 
 	function addTodo(event) {
-		if (event.which === ENTER_KEY) {
+		if (event.key === 'Enter') {
 			// todos = [...todos, {
       //   id: tempId,
       //   completed: false,
@@ -67,11 +67,11 @@
 	}
 
 	function doneEditKeydown(todo, event) {
-		if (event.which === ENTER_KEY) {
+		if (event.key === 'Enter') {
       doneEdit(todo);
     }
 
-    if (event.which === ESCAPE_KEY) {
+    if (event.key === 'Escape') {
       todo.title = beforeEditCache;
       todo.editing = false;
       todos = todos;
